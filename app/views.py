@@ -8,10 +8,6 @@ from app import app
 def index():
     return "<h1>Hello World</h1>"
 
-@app.route('/webgl', methods=['GET'])
-def webgl_index():
-    return "<h1>WebGL Experiments</h1>"
-
-@app.route('/webgl/basicscene', methods=['GET'])
-def webgl_basicscene():
+@app.route('/webgl/', methods=['GET'])
+def webgl():
     return render_template('basicscene.html')
